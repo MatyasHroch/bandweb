@@ -1,6 +1,5 @@
 'use client'; // Tento komponent je klientský
 
-import { CalendarIcon, ClockIcon, MapPinIcon } from '@heroicons/react/20/solid';
 import ConcertList from '../../components/ConcertList';
 
 
