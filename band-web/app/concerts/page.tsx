@@ -1,28 +1,14 @@
-import React from 'react';
+'use client'; // Tento komponent je klientský
+
+import { CalendarIcon, ClockIcon, MapPinIcon } from '@heroicons/react/20/solid';
+import ConcertList from '../../components/ConcertList';
+
 
 const Concerts: React.FC = () => {
   return (
-    <div className="p-8">
-      <h1 className="text-4xl font-bold text-center text-yellow-500">Nadcházející koncerty</h1>
-      <ul className="mt-8 space-y-4 text-lg text-gray-300">
-        <li className="flex justify-between">
-          <span>📍 Praha</span>
-          <span className="text-gray-400">1. ledna 2025</span>
-        </li>
-        <li className="flex justify-between">
-          <span>📍 Brno</span>
-          <span className="text-gray-400">15. ledna 2025</span>
-        </li>
-        <li className="flex justify-between">
-          <span>📍 Ostrava</span>
-          <span className="text-gray-400">30. ledna 2025</span>
-        </li>
-      </ul>
-      <div className="mt-8 text-center">
-        <a href="https://www.ticketmaster.com" className="text-yellow-400 underline">
-          Koupit lístky
-        </a>
-      </div>
+    <div className="max-w-7xl mx-auto p-6">
+      <h1 className="text-3xl font-bold text-center text-white mb-8">Všechny koncerty</h1>
+      <ConcertList />
     </div>
   );
 };
