@@ -17,28 +17,28 @@ const ConcertList: React.FC<{ upcomingOnly?: boolean }> = ({ upcomingOnly = fals
             {filteredConcerts.map((concert) => (
                 <div
                     key={concert.id}
-                    className="bg-[#271e09] p-6 rounded-lg shadow-lg transform transition duration-300 hover:bg-[#271e09]"
+                    className="bg-[#271e09] p-6 rounded-lg shadow-lg transform transition duration-300"
                     aria-labelledby={`concert-${concert.id}`}
                 >
-                    <h3 id={`concert-${concert.id}`} className="text-2xl font-bold text-yellow-500 mb-4">
+                    <h3 id={`concert-${concert.id}`} className="text-2xl font-bold text-accent mb-4">
                         {concert.name}
                     </h3>
 
                     {/* Čas koncertu */}
                     <div className="flex items-center space-x-4 mb-4" aria-label={`Čas koncertu: ${concert.time}`}>
-                        <ClockIcon className="h-6 w-6 text-yellow-400" aria-hidden="true" />
+                        <ClockIcon className="h-6 w-6 text-accent" aria-hidden="true" />
                         <span className="text-white">{concert.time}</span>
                     </div>
 
                     {/* Datum koncertu */}
                     <div className="flex items-center space-x-4 mb-4" aria-label={`Datum koncertu: ${concert.date}`}>
-                        <CalendarIcon className="h-6 w-6 text-yellow-400" aria-hidden="true" />
+                        <CalendarIcon className="h-6 w-6 text-accent" aria-hidden="true" />
                         <span className="text-white">{concert.date}</span>
                     </div>
 
                     {/* Místo koncertu */}
                     <div className="flex items-center space-x-4" aria-label={`Místo koncertu: ${concert.location}`}>
-                        <MapPinIcon className="h-6 w-6 text-yellow-400" aria-hidden="true" />
+                        <MapPinIcon className="h-6 w-6 text-accent" aria-hidden="true" />
                         <span className="text-white">{concert.location}</span>
                     </div>
                 </div>

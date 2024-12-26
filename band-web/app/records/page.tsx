@@ -1,4 +1,5 @@
 import React from 'react';
+import RecordList from '../../components/RecordList';
 
 const Records: React.FC = () => {
     return (
@@ -6,6 +7,7 @@ const Records: React.FC = () => {
             <h1 className="text-4xl font-bold text-center mb-8 text-accent">
                 Nahrávky
             </h1>
+            <RecordList />
         </div>
     );
 };
