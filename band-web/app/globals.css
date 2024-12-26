@@ -1,21 +1,30 @@
+/* globals.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #705414;
+  /* Hlavní barva pozadí */
+  --foreground: #c58d14;
+  /* Hlavní barva textu */
+  --accent: #c9aa76;
+  /* Akcentová barva */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1a120b;
+    /* Tmavší varianta pozadí pro dark mode */
+    --foreground: #c9aa76;
+    /* Světlejší text v dark mode */
+    --accent: #c58d14;
+    /* Akcentová barva (nemění se) */
   }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  @apply text-foreground bg-background;
   font-family: Arial, Helvetica, sans-serif;
 }

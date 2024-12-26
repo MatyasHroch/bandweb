@@ -16,9 +16,9 @@ const ConcertList: React.FC<{ upcomingOnly?: boolean }> = ({ upcomingOnly = fals
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredConcerts.map((concert) => (
                 <div
-                    key={concert.id} // Pokud má koncert ID, použijeme ho pro key
-                    className="bg-gray-800 p-6 rounded-lg shadow-lg transform transition duration-300"
-                    aria-labelledby={`concert-${concert.id}`} // Přístupnost pro čtečky obrazovky
+                    key={concert.id}
+                    className="bg-[#271e09] p-6 rounded-lg shadow-lg transform transition duration-300 hover:bg-[#271e09]"
+                    aria-labelledby={`concert-${concert.id}`}
                 >
                     <h3 id={`concert-${concert.id}`} className="text-2xl font-bold text-yellow-500 mb-4">
                         {concert.name}
@@ -42,6 +42,7 @@ const ConcertList: React.FC<{ upcomingOnly?: boolean }> = ({ upcomingOnly = fals
                         <span className="text-white">{concert.location}</span>
                     </div>
                 </div>
+
             ))}
         </div>
     );

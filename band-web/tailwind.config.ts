@@ -1,3 +1,5 @@
+// tailwind.config.js
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -11,6 +13,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        accent: "var(--accent)", // Přidána barva akcentu
       },
     },
   },
