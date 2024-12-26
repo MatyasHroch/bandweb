@@ -1,13 +1,27 @@
 import React from 'react';
+import Head from 'next/head';
 
 const About: React.FC = () => {
   return (
-    <div className="p-8">
-      <h1 className="text-4xl font-bold text-center text-yellow-500">O nás</h1>
-      <p className="mt-6 text-lg text-gray-300">
-        Jsme kapela, která vznikla v roce 2020 a od té doby jsme hráli na mnoha místech po celé zemi...
-      </p>
-    </div>
+    <>
+      <Head>
+        <title>O nás - Naše kapela</title>
+        <meta name="description" content="Jsme kapela, která vznikla v roce 2020 a od té doby jsme hráli na mnoha místech po celé zemi. Seznamte se s námi!" />
+        <meta name="keywords" content="kapela, rocková kapela, hudba, koncerty, historie kapely, O nás" />
+        <meta property="og:title" content="O nás - Naše kapela" />
+        <meta property="og:description" content="Jsme kapela, která vznikla v roce 2020 a od té doby jsme hráli na mnoha místech po celé zemi. Seznamte se s námi!" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:title" content="O nás - Naše kapela" />
+        <meta name="twitter:description" content="Jsme kapela, která vznikla v roce 2020 a od té doby jsme hráli na mnoha místech po celé zemi. Seznamte se s námi!" />
+      </Head>
+
+      <div className="p-8">
+        <h1 className="text-4xl font-bold text-center text-yellow-500">O nás</h1>
+        <p className="mt-6 text-lg text-gray-300">
+          Jsme kapela, která vznikla v roce 2020 a od té doby jsme hráli na mnoha místech po celé zemi...
+        </p>
+      </div>
+    </>
   );
 };
 
