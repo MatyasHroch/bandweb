@@ -30,8 +30,14 @@ const HomePage: React.FC = () => {
 
       <div className="text-secondary">
         <h1 className="text-3xl font-bold text-accent">
-          Vítejte na stránkách naší kapely!
+          Vítejte na stránkách kapely Lesanten!
         </h1>
+
+        {/* Přidání obrázku */}
+        <div className="mt-4">
+          <img src="/img/lesantenCover.webp" alt="Fotka kapely" className="h-[70vh] object-cover rounded-lg shadow-lg" />
+        </div>
+
         <p className="mt-4 text-secondary">
           Zde najdete všechny informace o našich nadcházejících událostech, koncertech a dalších aktivitách.
         </p>
