@@ -2,14 +2,23 @@ import React from 'react';
 import { concerts } from '@/data/concertsData'; // Importujeme data o koncertech
 import { ClockIcon, CalendarIcon, MapPinIcon } from '@heroicons/react/20/solid';
 
-const ConcertList: React.FC<{ upcomingOnly?: boolean }> = ({ upcomingOnly = false }) => {
+const ConcertList: React.FC<{ upcomingOnly?: boolean, pastOnly?: boolean }> = ({ upcomingOnly = false, pastOnly = false }) => {
     // Získání aktuálního data
     const currentDate = new Date();
 
     // Filtrace koncertů na základě data
     const filteredConcerts = concerts.filter((concert) => {
         const concertDate = new Date(concert.date);
-        return upcomingOnly ? concertDate >= currentDate : true; // Pokud je 'upcomingOnly', zobrazíme pouze nadcházející koncerty
+        if (upcomingOnly && pastOnly) return false; // Pokud jsou nastaveny oba filtry, nezobrazíme žádný koncert
+
+        if (pastOnly) {
+            return concertDate < currentDate; // Pokud je 'pastOnly', zobrazíme pouze minulé koncerty
+        }
+        if (upcomingOnly) {
+            return concertDate >= currentDate; // Pokud je 'upcomingOnly', zobrazíme pouze nadcházející koncerty
+        }
+
+        return true; // Pokud nejsou nastaveny žádné filtry, zobrazíme všechny koncerty
     });
 
     return (
@@ -17,28 +26,28 @@ const ConcertList: React.FC<{ upcomingOnly?: boolean }> = ({ upcomingOnly = fals
             {filteredConcerts.map((concert) => (
                 <div
                     key={concert.id}
-                    className="bg-[#271e09] p-6 rounded-lg shadow-lg transform transition duration-300 hover:bg-[#271e09]"
+                    className="bg-background-secondary p-6 rounded-lg shadow-lg transform transition duration-300"
                     aria-labelledby={`concert-${concert.id}`}
                 >
-                    <h3 id={`concert-${concert.id}`} className="text-2xl font-bold text-yellow-500 mb-4">
+                    <h3 id={`concert-${concert.id}`} className="text-2xl font-bold text-accent mb-4">
                         {concert.name}
                     </h3>
 
                     {/* Čas koncertu */}
                     <div className="flex items-center space-x-4 mb-4" aria-label={`Čas koncertu: ${concert.time}`}>
-                        <ClockIcon className="h-6 w-6 text-yellow-400" aria-hidden="true" />
+                        <ClockIcon className="h-6 w-6 text-accent" aria-hidden="true" />
                         <span className="text-white">{concert.time}</span>
                     </div>
 
                     {/* Datum koncertu */}
                     <div className="flex items-center space-x-4 mb-4" aria-label={`Datum koncertu: ${concert.date}`}>
-                        <CalendarIcon className="h-6 w-6 text-yellow-400" aria-hidden="true" />
+                        <CalendarIcon className="h-6 w-6 text-accent" aria-hidden="true" />
                         <span className="text-white">{concert.date}</span>
                     </div>
 
                     {/* Místo koncertu */}
                     <div className="flex items-center space-x-4" aria-label={`Místo koncertu: ${concert.location}`}>
-                        <MapPinIcon className="h-6 w-6 text-yellow-400" aria-hidden="true" />
+                        <MapPinIcon className="h-6 w-6 text-accent" aria-hidden="true" />
                         <span className="text-white">{concert.location}</span>
                     </div>
                 </div>

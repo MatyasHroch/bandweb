@@ -27,11 +27,21 @@ const HomePage: React.FC = () => {
           content="Objevte nadcházející koncerty a akce naší kapely. Připojte se k nám na našich vystoupeních a zjistěte více o naší hudbě!"
         />
       </Head>
+      {/* FONTS */}
+      <style>
+        @import url(`&apos;`https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap`&apos;`);
+      </style>
 
       <div className="text-secondary">
         <h1 className="text-3xl font-bold text-accent">
-          Vítejte na stránkách naší kapely!
+          Vítejte na stránkách kapely Lesanten!
         </h1>
+
+        {/* Přidání obrázku */}
+        <div className="mt-4">
+          <img src="/img/lesantenCover.webp" alt="Fotka kapely" className="h-[70vh] object-cover rounded-lg shadow-lg" />
+        </div>
+
         <p className="mt-4 text-secondary">
           Zde najdete všechny informace o našich nadcházejících událostech, koncertech a dalších aktivitách.
         </p>

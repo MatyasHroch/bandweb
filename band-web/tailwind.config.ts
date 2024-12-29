@@ -12,6 +12,7 @@ export default {
     extend: {
       colors: {
         background: "var(--background)",
+        "background-secondary": "var(--background-secondary)",
         foreground: "var(--foreground)",
         accent: "var(--accent)", // Přidána barva akcentu
       },
