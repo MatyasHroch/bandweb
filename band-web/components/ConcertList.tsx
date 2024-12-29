@@ -17,7 +17,7 @@ const ConcertList: React.FC<{ upcomingOnly?: boolean }> = ({ upcomingOnly = fals
             {filteredConcerts.map((concert) => (
                 <div
                     key={concert.id}
-                    className="bg-[#271e09] p-6 rounded-lg shadow-lg transform transition duration-300"
+                    className="bg-background-secondary p-6 rounded-lg shadow-lg transform transition duration-300"
                     aria-labelledby={`concert-${concert.id}`}
                 >
                     <h3 id={`concert-${concert.id}`} className="text-2xl font-bold text-accent mb-4">

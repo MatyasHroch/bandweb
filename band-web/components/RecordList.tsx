@@ -8,7 +8,7 @@ const RecordList: React.FC = () => {
             {records.map((record) => (
                 <div
                     key={record.id}
-                    className="bg-[#271e09] p-6 rounded-lg shadow-lg transform transition duration-300"
+                    className="bg-background-secondary p-6 rounded-lg shadow-lg transform transition duration-300"
                     aria-labelledby={`record-${record.id}`}
                 >
                     <h3 id={`record-${record.id}`} className="text-2xl font-bold mb-4 text-accent">

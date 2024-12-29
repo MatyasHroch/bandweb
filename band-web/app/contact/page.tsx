@@ -1,4 +1,5 @@
 import React from 'react';
+import ContactSection from '../../components/ContactSection';
 
 const Contact: React.FC = () => {
   return (
@@ -6,6 +7,7 @@ const Contact: React.FC = () => {
       <h1 className="text-4xl font-bold text-center mb-8 text-accent">
         Kontakt
       </h1>
+      <ContactSection />
     </div>
   );
 };
