@@ -2,10 +2,12 @@ import React from 'react';
 import { records } from '@/data/recordsData'; // Importujeme data o nahrávkách
 import { CalendarIcon, MapPinIcon, ArrowDownTrayIcon, AlbumIcon } from '@heroicons/react/20/solid';
 
-const RecordList: React.FC = () => {
+const RecordList: React.FC<{ filter?: Function }> = ({ filter = (item) => true }) => {
+    const filteredRecords = records.filter(filter);
+
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {records.map((record) => (
+            {filteredRecords.map((record) => (
                 <div
                     key={record.id}
                     className="bg-background-secondary p-6 rounded-lg shadow-lg transform transition duration-300"

@@ -2,14 +2,23 @@ import React from 'react';
 import { concerts } from '@/data/concertsData'; // Importujeme data o koncertech
 import { ClockIcon, CalendarIcon, MapPinIcon } from '@heroicons/react/20/solid';
 
-const ConcertList: React.FC<{ upcomingOnly?: boolean }> = ({ upcomingOnly = false }) => {
+const ConcertList: React.FC<{ upcomingOnly?: boolean, pastOnly?: boolean }> = ({ upcomingOnly = false, pastOnly = false }) => {
     // Získání aktuálního data
     const currentDate = new Date();
 
     // Filtrace koncertů na základě data
     const filteredConcerts = concerts.filter((concert) => {
         const concertDate = new Date(concert.date);
-        return upcomingOnly ? concertDate >= currentDate : true; // Pokud je 'upcomingOnly', zobrazíme pouze nadcházející koncerty
+        if (upcomingOnly && pastOnly) return false; // Pokud jsou nastaveny oba filtry, nezobrazíme žádný koncert
+
+        if (pastOnly) {
+            return concertDate < currentDate; // Pokud je 'pastOnly', zobrazíme pouze minulé koncerty
+        }
+        if (upcomingOnly) {
+            return concertDate >= currentDate; // Pokud je 'upcomingOnly', zobrazíme pouze nadcházející koncerty
+        }
+
+        return true; // Pokud nejsou nastaveny žádné filtry, zobrazíme všechny koncerty
     });
 
     return (

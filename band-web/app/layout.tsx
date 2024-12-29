@@ -78,7 +78,8 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
         {/* Footer */}
         <footer className="p-4 text-center bg-footer-bg text-footer-text">
-          <p>&copy; {new Date().getFullYear()} Hroch</p>
+          <p>Stránky jsou stále v procesu vývoje.</p>
+          <p>&copy; {new Date().getFullYear()} M.H.</p>
         </footer>
       </body>
     </html>

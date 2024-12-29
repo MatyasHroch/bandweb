@@ -1,4 +1,4 @@
-interface Concert {
+export interface Concert {
   id: number;
   name: string;
   time: string;
