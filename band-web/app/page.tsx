@@ -39,7 +39,7 @@ const HomePage: React.FC = () => {
 
         {/* Přidání obrázku */}
         <div className="mt-4">
-          <img src="/img/lesantenCover.webp" alt="Fotka kapely" className="h-[70vh] object-cover rounded-lg shadow-lg" />
+          <img src="/img/lesantenCover.webp" alt="Fotka kapely" className="h-[65vh] object-cover rounded-lg shadow-lg" />
         </div>
 
         <p className="mt-4 text-secondary">

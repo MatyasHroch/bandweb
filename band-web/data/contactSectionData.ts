@@ -6,12 +6,17 @@ export interface Contact {
 }
 
 export const contactSectionData: Contact[] = [
-  { id: 1, name: "Jan Novák", type: "email", value: "jan.novak@example.com" },
+  {
+    id: 1,
+    name: "Josef Žerdík",
+    type: "email",
+    value: "zerdik.josef@seznam.cz",
+  },
+  { id: 3, name: "Josef Žerdík", type: "phone", value: "+420 603 523 847" },
   {
     id: 2,
-    name: "Petr Svoboda",
+    name: "Zuzana Teichmannová",
     type: "email",
-    value: "petr.svoboda@example.com",
+    value: "z.tei@seznam.cz",
   },
-  { id: 3, name: "Marie Dvořáková", type: "phone", value: "+420 123 456 789" },
 ];
