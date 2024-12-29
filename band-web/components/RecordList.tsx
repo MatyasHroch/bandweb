@@ -1,8 +1,9 @@
 import React from 'react';
 import { records } from '@/data/recordsData'; // Importujeme data o nahrávkách
-import { CalendarIcon, MapPinIcon, ArrowDownTrayIcon, AlbumIcon } from '@heroicons/react/20/solid';
+import { CalendarIcon, ArrowDownTrayIcon } from '@heroicons/react/20/solid';
+import { Record } from '../data/recordsData';
 
-const RecordList: React.FC<{ filter?: Function }> = ({ filter = (item) => true }) => {
+const RecordList: React.FC<{ filter?: (item: Record) => boolean }> = ({ filter = (item) => item || true }) => {
     const filteredRecords = records.filter(filter);
 
     return (
@@ -34,7 +35,6 @@ const RecordList: React.FC<{ filter?: Function }> = ({ filter = (item) => true }
                         <AlbumIcon className="h-6 w-6 text-accent" aria-hidden="true" />
                         <span className="text-foreground">{record.location}</span>
                     </div> */}
-
 
 
                     {/* Tlačítka pro stažení */}

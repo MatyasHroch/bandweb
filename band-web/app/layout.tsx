@@ -1,24 +1,8 @@
-'use client';
-
-import React, { useState } from 'react';
-import Link from 'next/link';
+import React from 'react';
 import './globals.css';
 import Navbar from '../components/Navbar';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [isMenuOpen, setMenuOpen] = useState(false);
-
-
-  const toggleMenu = () => {
-    setMenuOpen(!isMenuOpen);
-  };
-
-  const closeMenu = () => {
-    setMenuOpen(false);
-  };
-
-
-
   return (
     <html lang="cs">
       <head>
