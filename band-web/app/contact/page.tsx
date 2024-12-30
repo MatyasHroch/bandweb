@@ -5,10 +5,10 @@ import Socials from '../../components/Socials';
 const Contact: React.FC = () => {
   return (
     <div className="bg-background text-foreground">
-      <h1 className="text-4xl font-bold text-center mb-8 text-accent">
+      <h1 className="text-4xl font-bold mb-8 text-accent">
         Kontakt
       </h1>
-      <div className="flex justify-between flex-col md:flex-row">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-8">
         <ContactSection />
         <Socials />
       </div>

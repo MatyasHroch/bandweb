@@ -6,7 +6,7 @@ const ContactSection: React.FC = () => {
     const contacts = contactSectionData;
 
     return (
-        <div className="bg-background p-6">
+        <div className="bg-background">
             <h2 className="text-2xl font-bold text-accent mb-6">Kontaktní osoby</h2>
             <ul className="space-y-4">
                 {contacts.map((contact) => (

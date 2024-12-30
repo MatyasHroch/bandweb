@@ -5,6 +5,8 @@ interface IconLinkProps {
     size?: number; // Velikost ikony (šířka a výška budou stejné)
     target?: "_blank" | "_self" | "_parent" | "_top";
     rel?: string; // Např. "noopener noreferrer"
+    children?: React.ReactNode;  // Přidání children
+
 }
 
 export const IconLink: React.FC<IconLinkProps> = ({

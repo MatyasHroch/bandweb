@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import ConcertList from '@/components/ConcertList'; // Importujeme komponentu
-import { concerts } from '../data/concertsData';
+// import ConcertList from '@/components/ConcertList'; // Importujeme komponentu
+// import { concerts } from '../data/concertsData';
 
 const HomePage: React.FC = () => {
   return (
@@ -47,11 +47,10 @@ const HomePage: React.FC = () => {
           Zde najdete všechny informace o našich nadcházejících událostech, koncertech a dalších aktivitách.
         </p>
 
-
-        <h2 className="mt-4 text-3xl font-bold mb-8 text-accent">
-          {concerts && concerts.length ? "Nadcházející koncerty" : ""}
-        </h2>
-        <ConcertList upcomingOnly={true} /> {/* Zobrazíme pouze nadcházející koncerty */}
+        {/* <h2 className="mt-4 text-3xl font-bold mb-8 text-accent">
+          {concerts && concerts.length && concerts.map((concert) => Date.now < concert.date) .length ? "Nadcházející koncerty" : ""}
+        </h2> */}
+        {/* <ConcertList upcomingOnly={true} />  */}
       </div>
     </>
   );
