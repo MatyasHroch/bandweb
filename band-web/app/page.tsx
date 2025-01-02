@@ -47,11 +47,23 @@ const HomePage: React.FC = () => {
           Zde najdete všechny informace o našich nadcházejících událostech, koncertech a dalších aktivitách.
         </p>
 
+
+        <h1 className="text-3xl font-bold text-accent mt-8 my-4">
+          Koncert v Českém rozhlase
+        </h1>
+
+        <iframe src="https://www.youtube.com/embed/4kenlzokWwY?si=zmWQBt2ioWRh97iO" title="YouTube video player" frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin" allowFullScreen
+          className="w-full lg:w-1/2 h-auto shadow-lg aspect-video"
+        >
+        </iframe>
+
         {/* <h2 className="mt-4 text-3xl font-bold mb-8 text-accent">
           {concerts && concerts.length && concerts.map((concert) => Date.now < concert.date) .length ? "Nadcházející koncerty" : ""}
         </h2> */}
         {/* <ConcertList upcomingOnly={true} />  */}
-      </div>
+      </div >
     </>
   );
 };
