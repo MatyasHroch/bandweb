@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
                 {navLinks.map((link) => (
                     <Link key={link.path} href={link.path} onClick={closeMenu}>
                         <span
-                            className={`block text-center py-2 md:py-0 ${pathname === link.path
+                            className={`block text-center text-xl py-2 md:py-0 ${pathname === link.path
                                 ? "text-accent border-b-2 border-none"
                                 : "text-acent hover:text-accent"
                                 }`}
