@@ -16,7 +16,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         </header>
 
         {/* Obsah stránky */}
-        <main className="p-8 mt-24 sm:px-12">{children}</main>
+        <main className="p-8 mt-20 sm:px-12">{children}</main>
 
         {/* Footer */}
         <Footer />

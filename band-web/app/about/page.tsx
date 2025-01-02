@@ -28,7 +28,7 @@ const About: React.FC = () => {
       </Head>
 
       <div className="p-8 bg-primary text-secondary">
-        <h1 className="text-4xl font-bold text-center text-accent">
+        <h1 className="text-4xl font-bold text-start md:text-center text-accent">
           O nás
         </h1>
         <p className="mt-6 text-lg">

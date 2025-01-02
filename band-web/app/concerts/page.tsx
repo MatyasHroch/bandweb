@@ -25,7 +25,7 @@ const Concerts: React.FC = () => {
       </Head>
 
       <div className="bg-background text-foreground">
-        <h1 className="text-4xl font-bold text-center mb-8 text-accent">
+        <h1 className="text-4xl font-bold text-start md:text-center mb-8 text-accent">
           Všechny koncerty
         </h1>
         <ConcertList />

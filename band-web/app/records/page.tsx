@@ -6,7 +6,7 @@ import { IconLink } from '../../components/icons/IconLink';
 const Records: React.FC = () => {
     return (
         <div className="bg-background text-foreground">
-            <h1 className="text-4xl font-bold text-center mb-8 text-accent">
+            <h1 className="text-4xl font-bold text-start md:text-center mb-8 text-accent">
                 Nahrávky
             </h1>
             <h2 className="text-foreground text-3xl font-bold my-8 text-start flex items-center">
