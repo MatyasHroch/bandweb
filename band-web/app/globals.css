@@ -93,3 +93,7 @@ body {
   font-weight: 900;
   font-style: italic;
 }
+
+svg {
+  fill: currentColor; /* Ensure color inheritance */
+}
