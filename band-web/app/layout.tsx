@@ -2,8 +2,10 @@ import React from 'react';
 import './globals.css';
 import Navbar from '../components/Navbar';
 import Socials from '../components/Socials';
+import Footer from '../components/Footer';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+
   return (
     <html lang="cs">
       <head>
@@ -18,13 +20,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         <main className="p-8 mt-24 sm:px-12">{children}</main>
 
         {/* Footer */}
-        <footer className="p-4 text-center bg-footer-bg text-footer-text">
-          <div className="flex justify-center my-4">
-            <Socials />
-          </div>
-          <p>Stránky jsou stále v procesu vývoje.</p>
-          <p>&copy; {new Date().getFullYear()} M.H.</p>
-        </footer>
+        <Footer />
       </body>
     </html>
   );
