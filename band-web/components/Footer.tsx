@@ -3,7 +3,7 @@ import { usePathname } from 'next/navigation';
 import Socials from './Socials';
 
 const Footer: React.FC = () => {
-    const pathName = usePathname()a;
+    const pathName = usePathname();
     return (
         <footer className="p-4 text-center bg-footer-bg text-footer-text">
             {pathName != '/contact' && (

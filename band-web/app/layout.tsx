@@ -1,7 +1,6 @@
 import React from 'react';
 import './globals.css';
 import Navbar from '../components/Navbar';
-import Socials from '../components/Socials';
 import Footer from '../components/Footer';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
