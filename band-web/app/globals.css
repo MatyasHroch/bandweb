@@ -95,5 +95,10 @@ body {
 }
 
 svg {
-  fill: currentColor; /* Ensure color inheritance */
+  fill: currentColor;
+  /* Ensure color inheritance */
+}
+
+.top-18 {
+  top: 4.5rem;
 }

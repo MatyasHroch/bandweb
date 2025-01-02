@@ -26,6 +26,7 @@ const Navbar: React.FC = () => {
 
     return (
         <nav className="flex items-center justify-between bg-header-bg">
+
             {/* Logo vlevo */}
             <div className="flex items-center space-x-4">
                 <Link href="/" onClick={closeMenu}>
@@ -40,11 +41,10 @@ const Navbar: React.FC = () => {
             >
                 &#9776; {/* Unicode pro hamburger ikonu */}
             </button>
-
             {/* Navigační odkazy */}
             <div
                 className={`${isMenuOpen ? "block shadow-md" : "hidden"
-                    } md:flex md:items-center md:space-x-8 text-xl absolute md:relative top-20 md:top-0 left-0 w-full md:w-auto bg-background md:bg-transparent`}
+                    } md:flex md:items-center md:space-x-8 text-xl absolute md:relative top-18 md:top-0 left-0 w-full md:w-auto bg-background md:bg-transparent`}
             >
                 {navLinks.map((link) => (
                     <Link key={link.path} href={link.path} onClick={closeMenu}>
@@ -59,7 +59,7 @@ const Navbar: React.FC = () => {
                     </Link>
                 ))}
             </div>
-        </nav>
+        </nav >
     );
 }
 
