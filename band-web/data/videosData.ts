@@ -4,7 +4,6 @@ export interface Video {
 }
 
 export const videos: Video[] = [
-  { name: "Čerešně", filename: "ceresne.mp4" },
   { name: "Naivní Malíř", filename: "naivniMalir.mp4" },
   { name: "Zikmund", filename: "zikmund.mp4" },
   { name: "Nahoru Dolů", filename: "nahoruDolu.mp4" },
@@ -13,4 +12,6 @@ export const videos: Video[] = [
   { name: "O Podzimu", filename: "oPodzimu.mp4" },
   { name: "Stříbrostín", filename: "stribrostin.mp4" },
   { name: "Lesanten", filename: "lesanten.mp4" },
+  { name: "Čerešně", filename: "ceresne.mp4" },
+  { name: "Staré rány", filename: "stareRany.mp4" },
 ];

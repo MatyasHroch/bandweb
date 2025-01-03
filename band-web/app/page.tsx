@@ -34,23 +34,17 @@ const HomePage: React.FC = () => {
       </style>
 
       <div className="text-secondary">
-        <h1 className="text-3xl font-bold text-accent">
+        <h1 className="text-3xl font-bold text-accent hidden">
           Vítejte na stránkách kapely Lesanten!
         </h1>
 
-        {/* Přidání obrázku */}
         <div className="mt-4">
-          <img src="/img/lesantenCover.webp" alt="Fotka kapely" className="h-[65vh] object-cover rounded-lg shadow-lg" />
+          <img src="/img/lesantenCover.webp" alt="Fotka kapely" className="h-auto md:h-[75vh] object-cover rounded-lg shadow-lg" />
         </div>
 
-        <p className="mt-4 text-secondary">
-          Zde najdete všechny informace o našich nadcházejících událostech, koncertech a dalších aktivitách.
-        </p>
-
-
-        <h1 className="text-3xl font-bold text-accent mt-8 my-4">
+        <h2 className="text-3xl font-bold text-accent mt-8 my-4">
           Koncert v Českém rozhlase
-        </h1>
+        </h2>
 
         <iframe src="https://www.youtube.com/embed/4kenlzokWwY?si=zmWQBt2ioWRh97iO" title="YouTube video player" frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

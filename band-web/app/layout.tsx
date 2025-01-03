@@ -8,7 +8,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <html lang="cs">
       <head>
-        <title>Web Kapely</title>
+        <title>Lesanten</title>
       </head>
       <body className="bg-background text-foreground">
         <header className="p-4 px-8 fixed top-0 left-0 w-full z-10 bg-background sm:px-12 border-b border-background-secondary">
