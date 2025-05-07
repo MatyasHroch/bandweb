@@ -7,7 +7,7 @@ const Concerts: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Všechny koncerty naší kapely</title>
+        <title>Koncerty</title>
         <meta
           name="description"
           content="Prohlédněte si všechny koncerty naší kapely a připojte se k nám na nadcházejících akcích. Zjistěte více o našich vystoupeních a kde nás můžete vidět."
@@ -26,7 +26,7 @@ const Concerts: React.FC = () => {
 
       <div className="bg-background text-foreground">
         <h1 className="text-4xl font-bold text-start md:text-center mb-8 text-accent">
-          Všechny koncerty
+          Koncerty
         </h1>
         <ConcertList />
       </div>

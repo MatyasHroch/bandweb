@@ -48,7 +48,18 @@ const ConcertList: React.FC<{ upcomingOnly?: boolean, pastOnly?: boolean }> = ({
                     {/* Místo koncertu */}
                     <div className="flex items-center space-x-4" aria-label={`Místo koncertu: ${concert.location}`}>
                         <MapPinIcon className="h-6 w-6 text-accent" aria-hidden="true" />
-                        <span className="text-white">{concert.location}</span>
+                        {concert.mapSrc ? (
+                            <a
+                                href={concert.mapSrc}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-white"
+                            >
+                                {concert.location}
+                            </a>
+                        ) : (
+                            <span className="text-white">{concert.location}</span>
+                        )}
                     </div>
                 </div>
 
