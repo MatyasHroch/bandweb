@@ -1,6 +1,6 @@
 import React from 'react';
 import { concerts } from '@/data/concertsData'; // Importujeme data o koncertech
-import { ClockIcon, CalendarIcon, MapPinIcon } from '@heroicons/react/20/solid';
+import { ClockIcon, CalendarIcon, MapPinIcon, GlobeAltIcon } from '@heroicons/react/20/solid';
 
 const ConcertList: React.FC<{ upcomingOnly?: boolean, pastOnly?: boolean }> = ({ upcomingOnly = false, pastOnly = false }) => {
     // Získání aktuálního data
@@ -42,17 +42,17 @@ const ConcertList: React.FC<{ upcomingOnly?: boolean, pastOnly?: boolean }> = ({
                     {/* Datum koncertu */}
                     <div className="flex items-center space-x-4 mb-4" aria-label={`Datum koncertu: ${concert.date}`}>
                         <CalendarIcon className="h-6 w-6 text-accent" aria-hidden="true" />
-                        <time datetime={concert.date} className="text-white">{{
+                        <time dateTime={concert.date} className="text-white">{
                             new Date(concert.date).toLocaleDateString('cs-CZ', {
                                 day: 'numeric',
                                 month: 'numeric',
                                 year: 'numeric',
                             })
-                        }}</time>
+                        }</time>
                     </div>
 
                     {/* Místo koncertu */}
-                    <div className="flex items-center space-x-4" aria-label={`Místo koncertu: ${concert.location}`}>
+                    <div className="flex items-center space-x-4 mb-4" aria-label={`Místo koncertu: ${concert.location}`}>
                         <MapPinIcon className="h-6 w-6 text-accent" aria-hidden="true" />
                         {concert.mapSrc ? (
                             <a
@@ -67,6 +67,21 @@ const ConcertList: React.FC<{ upcomingOnly?: boolean, pastOnly?: boolean }> = ({
                             <span className="text-white">{concert.location}</span>
                         )}
                     </div>
+
+                    {/* Odkaz na událost */}
+                    {concert.eventUrl && (
+                        <div className="flex items-center space-x-4" aria-label="Odkaz na událost">
+                            <GlobeAltIcon className="h-6 w-6 text-accent" aria-hidden="true" />
+                            <a
+                                href={concert.eventUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-white underline"
+                            >
+                                Stránky události
+                            </a>
+                        </div>
+                    )}
                 </div>
 
             ))}

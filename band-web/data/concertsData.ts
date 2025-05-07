@@ -5,6 +5,7 @@ export interface Concert {
   date: string;
   location: string;
   mapSrc?: string;
+  eventUrl?: string;
 }
 
 export const concerts: Concert[] = [
@@ -15,5 +16,6 @@ export const concerts: Concert[] = [
     date: "2025-05-19",
     location: "Sokolská třída 26/175 702 00 Ostrava",
     mapSrc: "https://mapy.cz/s/behenasagu",
+    eventUrl: "https://www.klub-parnik.cz/program/2025/lesanten/",
   },
 ];
