@@ -42,7 +42,13 @@ const ConcertList: React.FC<{ upcomingOnly?: boolean, pastOnly?: boolean }> = ({
                     {/* Datum koncertu */}
                     <div className="flex items-center space-x-4 mb-4" aria-label={`Datum koncertu: ${concert.date}`}>
                         <CalendarIcon className="h-6 w-6 text-accent" aria-hidden="true" />
-                        <span className="text-white">{concert.date}</span>
+                        <time datetime={concert.date} className="text-white">{{
+                            new Date(concert.date).toLocaleDateString('cs-CZ', {
+                                day: 'numeric',
+                                month: 'numeric',
+                                year: 'numeric',
+                            })
+                        }}</time>
                     </div>
 
                     {/* Místo koncertu */}
